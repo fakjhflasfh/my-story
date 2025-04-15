@@ -1,0 +1,146 @@
+/* 全局樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    line-height: 1.6;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 0;
+    transition: background 0.3s ease;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav .nav-links li {
+    margin: 0 15px;
+  }
+  
+  nav .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  nav .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    nav .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  /* Main Content */
+  main {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .scene {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .scene-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .scene img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .scene:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .scene img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Additional styling for responsiveness */
+  @media (max-width: 768px) {
+    .scene-container {
+      padding: 15px;
+    }
+  
+    nav .nav-links {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  
